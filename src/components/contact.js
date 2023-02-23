@@ -16,7 +16,7 @@ export const Contact = () => {
     e.preventDefault();
     setError(false);
     try {
-      const response = await fetch(`${process.env.SERVER_URL}/demo`, {
+      const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/demo`, {
         method: "POST",
         body: JSON.stringify(form),
         headers: {
