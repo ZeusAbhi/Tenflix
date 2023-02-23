@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { useAutoAnimate } from '@formkit/auto-animate/react'
-
+import wednesdayVideo from "./Video/video.mp4"
 import "./vidcard.css";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -82,7 +82,7 @@ export const Pop = ({Data,Text="Popular on Netflix",special=false}) => {
           <SwiperSlide>
             <div className="box">
               {Data.slice(0,2).map((d) => {
-                return <Card imgsrc={d.imgUrl} videosrc={d.videosrc?d.videosrc:"/Video/video.mov"} />;
+                return <Card imgsrc={d.imgUrl} videosrc={d.videosrc?d.videosrc:wednesdayVideo} />;
 
               })}
             </div>
@@ -90,7 +90,7 @@ export const Pop = ({Data,Text="Popular on Netflix",special=false}) => {
           <SwiperSlide>
             <div className="box">
               {Data.slice(2,4).map((d) => {
-                return <Card imgsrc={d.imgUrl} videosrc={d.videosrc?d.videosrc:"/Video/video.mov"} />;
+                return <Card imgsrc={d.imgUrl} videosrc={d.videosrc?d.videosrc:wednesdayVideo} />;
 
               })}
             </div>
@@ -98,21 +98,21 @@ export const Pop = ({Data,Text="Popular on Netflix",special=false}) => {
           <SwiperSlide>
             <div className="box">
             {Data.slice(4,6).map((d) => {
-                return <Card imgsrc={d.imgUrl} videosrc={d.videosrc?d.videosrc:"/Video/video.mov"} />;
+                return <Card imgsrc={d.imgUrl} videosrc={d.videosrc?d.videosrc:wednesdayVideo} />;
               })}
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="box">
             {Data.slice(6,8).map((d) => {
-                return <Card imgsrc={d.imgUrl} videosrc={d.videosrc?d.videosrc:"/Video/video.mov"} />;
+                return <Card imgsrc={d.imgUrl} videosrc={d.videosrc?d.videosrc:wednesdayVideo} />;
               })}
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="box">
             {Data.slice(8,10).map((d) => {
-                return <Card imgsrc={d.imgUrl} videosrc={d.videosrc?d.videosrc:"/Video/video.mov"} />;
+                return <Card imgsrc={d.imgUrl} videosrc={d.videosrc?d.videosrc:wednesdayVideo} />;
               })}
             </div>
           </SwiperSlide>
@@ -122,7 +122,7 @@ export const Pop = ({Data,Text="Popular on Netflix",special=false}) => {
 <SwiperSlide>
   <div className="box">
     {Data.slice(0,5).map((d) => {
-      return <Card imgsrc={d.imgUrl} videosrc={d.videosrc?d.videosrc:"/Video/video.mov"} />;
+      return <Card imgsrc={d.imgUrl} videosrc={d.videosrc?d.videosrc:wednesdayVideo} />;
 
     })}
   </div>
@@ -130,7 +130,7 @@ export const Pop = ({Data,Text="Popular on Netflix",special=false}) => {
 <SwiperSlide>
   <div className="box">
   {Data.slice(5,10).map((d) => {
-      return <Card imgsrc={d.imgUrl} videosrc={d.videosrc?d.videosrc:"/Video/video.mov"} />;
+      return <Card imgsrc={d.imgUrl} videosrc={d.videosrc?d.videosrc:wednesdayVideo} />;
     })}
   </div>
 </SwiperSlide>
