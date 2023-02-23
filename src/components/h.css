@@ -1,0 +1,150 @@
+@import url('https://fonts.cdnfonts.com/css/netflix-font');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Medula+One&family=Open+Sans:wght@300&family=Sofia+Sans+Extra+Condensed:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{ 
+    
+    background: #141414;
+   
+}
+
+.wednesday{
+    width: 50%;
+   
+}
+#p{
+    display: flex;
+}
+.f{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    padding: 0 1ch;
+    padding-right: 2ch;
+    
+}
+.f:hover{
+   
+    background-color:rgba(0,0,0,20%)
+}
+   .wrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  .wrapper::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    content: '';
+    background: linear-gradient(rgba(20, 20, 20, 0) 0% ,rgba(20,20,20,1) 100%)
+  }
+ 
+.h100{
+    height: 95vh;
+  
+    width: 100%;
+}
+/* .parent{
+    height:95vh;
+} */
+@media screen and (max-width: 1000px) {
+    .h100{
+    
+        height: 42vh;
+        width: 100%;
+         
+         
+    }
+   }
+
+#playorpause{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:clamp(1rem, 1.5vw, 2rem);
+    padding-left: 0.3vw;
+    font-weight: bold;
+}
+#arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:clamp(1.5rem, 3vw, 2rem);
+    padding-left: 0.5vw;
+    font-weight: bold;
+}
+#pl{
+        
+    position: absolute;
+    left: 3%;
+    border-radius: 4px;
+    border: 0px;
+    cursor: pointer;
+    bottom: 12%;
+}
+#text{
+    position: absolute;
+    left: 3%;
+    color: white;
+    font-size: clamp(2.5vw,2vw,3.5vw);
+    text-overflow: clip;
+    bottom: 12%;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    
+    }
+@media screen and (max-width: 700px) {
+    #text{
+        position: absolute;
+        left: 3%;
+        color: white;
+        font-size: 4vw;
+        text-overflow: clip;
+        bottom: 8%;
+         
+         
+    }
+   }
+.imagebox{
+    position: absolute;
+    bottom:26%;
+    left: 2%;
+}
+a {
+    text-decoration: none;
+    font-size: 19px;
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    padding: 30px;
+     display: flex;
+     font-weight: 500;
+
+}
+a:hover{
+    color: #D3D3D3;
+    
+}
+
+#myvideo{
+    /* width: 100%; */
+     /* height: auto; */
+     opacity: 0.7;
+     object-fit: fill;
+    
+}
+.frontimage{
+    /* width: 100%; */
+        /* height: auto; */
+    opacity: 0.7;
+    object-fit: cover;
+}
+.vi{
+    
+    background: linear-gradient(90deg, rgba(0,0,0,1) 60%, rgba(108,5,5,1) 100%, rgba(0,212,255,1) 100%, rgba(105,93,93,1) 100%, rgba(43,0,217,1) 100%);
+}

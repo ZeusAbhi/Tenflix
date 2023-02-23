@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.helphead{
+    position: relative;
+    padding-bottom: 10vh;
+    padding-left: 2ch;
+}
+.helph1{
+    left: 2vw;
+    color: white;
+}
+.contactContainer{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15vh;
+    padding-bottom: 10vh;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.forms{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    width: 100%;
+    padding: 0 1rem;
+}
+@media (min-width: 670px) {
+    .forms{
+        padding: 0 8rem;
+    }
+}
+
+.contactinput,.contactarea{
+   
+    width: 100%;
+    padding: 1.6rem 0.8rem;
+    outline: none;
+    border-radius: 0.4rem;
+    border: 0px;
+    background: rgba(16, 16, 16, 0.5);
+    color: white;
+    transition: all 300ms ease-in-out;
+}
+.contactinput:hover, .contactinput:focus,.contactarea:hover, .contactarea:focus{
+    background: rgba(0,0,0,0.5);
+}
+
+.contactbtn{
+    margin: 0 auto;
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.4rem;
+    background: #e50914;
+    color: white;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+
+}
+.contactbtn:hover{
+    background: #ce0c16;
+}
+#query{
+    resize: none;
+}
+#contactz{
+    height: 9vh;
+}
