@@ -2,7 +2,7 @@ import React, { useState,useEffect } from "react";
 import "./h.css";
 import Play from "./play";
 import "./navbar.css"
-import webdnesdayVideo from "./Video/video.mp4"
+import wednesdayVideo from "./Video/movie.mp4"
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 export const Header = () => {
   const[play,setPlay]=useState('Pause')
@@ -42,7 +42,7 @@ export const Header = () => {
     >
      { 
      show?(
-      <div><video id="myvideo" className="h100" src={webdnesdayVideo} autoPlay loop muted />
+      <div><video id="myvideo" className="h100" src={wednesdayVideo} autoPlay loop muted />
       <button id="pl" onClick={() => {
           Play()
           setCount(true)

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { useAutoAnimate } from '@formkit/auto-animate/react'
-import wednesdayVideo from "./Video/video.mp4"
+import wednesdayVideo from "./Video/movie.mp4"
 import "./vidcard.css";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
