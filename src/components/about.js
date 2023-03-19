@@ -20,6 +20,7 @@ export const About = () => {
           you're looking for a developer to add to your team, I'd love to hear
           from you! I designed this website using :</h3>
         </Slide>
+         
         <div className="frame">
           <Fade delay={1e3} cascade damping={1e-1}>
             <img
@@ -29,14 +30,15 @@ export const About = () => {
             />
             <img
               id="hm"
-              src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+              src="./nodet.png"
               alt=""
             />
             <img id="hms" src="./My project.png" alt="" />
             <img src="./css.png" alt="" id="hm" />
-            <img src="./nextjs.png" alt="" id="hm" />
+            <img src="./mongot.png" alt="" id="hm" />
           </Fade>
         </div>
+        
       </p>
     </>
   );
