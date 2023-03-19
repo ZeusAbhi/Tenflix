@@ -13,6 +13,7 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Navigation, Pagination } from "swiper";
+import { PlayCard, PlayCardPause } from "./play";
 
 
 const Card = ({ imgsrc, videosrc }) => {
@@ -52,10 +53,10 @@ const Card = ({ imgsrc, videosrc }) => {
           <video className="t" id="vis" src={videosrc} autoPlay loop muted />
           <div className="vidbtn">
             <div className="ral">
-              <button id="play">
+              <button id="play" onClick={()=>PlayCard()}>
                 <p id="f">▶</p>
                 </button>
-              <button id="pause" className="bold"><p id='f'>|  |</p></button>
+              <button id="pause" onClick={()=>PlayCardPause()} className="bold"><p id='f'>|  |</p></button>
             </div>
             <div className="vidtext">
               <p className="te" id="gr">96% Match</p>

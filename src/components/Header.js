@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from "react";
 import "./h.css";
-import Play from "./play";
+import {Play} from "./play";
 import "./navbar.css"
 import wednesdayVideo from "./Video/movie.mp4"
 import { useAutoAnimate } from '@formkit/auto-animate/react'

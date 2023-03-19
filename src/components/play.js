@@ -13,4 +13,23 @@ function Play() {
 } 
 
 
-export default Play;
+function PlayCard() { 
+    var vid = document.getElementById("vis"); 
+    if (vid.paused) {
+        vid.play();
+        
+    }
+   
+}
+function PlayCardPause() { 
+     
+    var vid = document.getElementById("vis"); 
+    if (vid.play) {
+        vid.pause();
+        
+    }
+   
+}
+export {Play,PlayCard,PlayCardPause};
+
+

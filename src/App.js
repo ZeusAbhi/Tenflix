@@ -1,4 +1,4 @@
-import { Facebook, Instagram, LinkedIn } from '@mui/icons-material';
+import { Facebook, GitHub, Instagram, LinkedIn } from '@mui/icons-material';
 import './App.css';
 import {Header} from './components/Header'
 import {Pop} from './components/pop'    
@@ -17,22 +17,21 @@ function App() {
       <Pop Data={Data5} Text="Critically Acclaimed TV Shows"/>
       <Pop Data={Data6} Text="Only on Netflix"/>
       <Pop Data={Data7} Text="Critically Acclaimed Movies"/>
-      <Pop Data={Data8} Text="Award-winning Quirky US TV Comedies"/>
+      <Pop Data={Data8} Text="Hollywood Movies"/>
       <Pop Data={Data9} Text="Blockbuster Movies"/>
       <div className="footer">
          <div className="icons">
-          {/* TODO: Links daal dena laude */}
-          <a href='https://facebook.com/lauda'>
+          <a href='https://www.facebook.com/abhinav.tushar.3'>
           <Facebook  htmlColor="white" className="muilogo"/>
           </a>
-          <a href='https://instagram.com/singleforever' >
-            <Instagram htmlColor="white" className="muilogo"/>
+          <a href='https://github.com/ZeusAbhi' >
+            <GitHub htmlColor="white" className="muilogo"/>
           </a>
-          <a href="https://linkedin.com/kalsepadunga">
+          <a href="https://www.linkedin.com/in/abhinav-tushar-36149521b/">
             <LinkedIn htmlColor="white" className="muilogo"/>
           </a>
          </div>
-         ©️Pimza Bhaimya @TenFlix Senior SDE
+         ©️TenFlix 2023
       </div>
     
     </>
