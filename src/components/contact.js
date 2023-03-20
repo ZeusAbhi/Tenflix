@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import "./contact.css";
 
 export const Contact = () => {
-  const [form, setForm] = useState({});
-  const [error, setError] = useState(false);
+  const [form, setForm] = useState({}); // state to hold form data
+  const [error, setError] = useState(false); // state to hold error status
 
+  // handle form input changes
   const handleForm = (e) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value,
     });
   };
-
+  // handle form submission
   const handlesubmit = async (e) => {
     e.preventDefault();
     setError(false);
@@ -25,6 +26,7 @@ export const Contact = () => {
       });
 
       if (response.status !== 200) {
+        // handle error responses
         if (response.status === 400 || response.status === 500) {
           const data = await response.json();
           if (data.message) {
@@ -40,6 +42,7 @@ export const Contact = () => {
       setError("Something went wrong");
     }
   };
+  // render contact form component
   return (
     <div className="contactContainer">
       <div className="helphead">
@@ -73,8 +76,8 @@ export const Contact = () => {
             placeholder="Your Query"
             onChange={handleForm}
           ></textarea>
-            <button className="contactbtn">Submit</button>
-            {error&&<div style={{color:"white" }}>ERROR</div>}
+          <button className="contactbtn">Submit</button>
+          {error && <div style={{ color: "white" }}>ERROR</div>}
         </form>
       </div>
     </div>

@@ -3,9 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* Set the parent container to relative positioning */
 .aboutparent{
   position: relative;
 }
+/* Create a gradient overlay on top of an image */
 .gr::after {
   position: absolute;
   bottom: 0;
@@ -21,11 +23,13 @@
     rgba(0, 0, 0, 0.8)
   );
 }
+/* Set the image to full width and height and lower opacity */
 .aboutnet{
   width: 100%;
   height: 100vh;
   opacity: 0.8;
 }
+/* Set logo to top left and text to below logo */
 .l {
   position: absolute;
   height: 75px;
@@ -33,6 +37,7 @@
   width: 150px;
   left: 2vw;
 }
+/* Set text color, position and size */
 .textz {
   color: white;
   position: absolute;
@@ -41,22 +46,25 @@
   left: 2vw;
   word-break: break-word;
 }
-
+/* Set margin, height and position for the first logo */
 #hm {
   margin-top: 5vh;
   height: 12vh;
   margin-right: 2vw;
   
 }
+/* Set margin, height and position for the second logo */
 #hms {
   margin-top: 2vh;
   height: 15vh;
   
 }
+/* Create a grid layout with min/max constraints for each column */
 .frame {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
-}
+} 
+/* Adjust the layout for smaller screens */
 @media screen and (max-width: 1000px ) {
   .frame {
     flex-direction: column;
@@ -71,7 +79,8 @@
   .textz{
     font-size: 70%;
   }
-} 
+}  
+/* Adjust the layout for medium height screens */
 @media screen and ((min-height:1000px) and (max-height: 1400px)) {
    .textz{
     font-size: 100%;

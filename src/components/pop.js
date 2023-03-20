@@ -15,13 +15,15 @@ import "swiper/css/navigation";
 import { Navigation, Pagination } from "swiper";
 import { PlayCard, PlayCardPause } from "./play";
 
-
+// Define custom component Card to render individual movie card
 const Card = ({ imgsrc, videosrc }) => {
   const [mouseEffect, triggerMouseEffect] = useState(false);
   const [showImg, setShowImg] = useState(true);
-
+  
+   // Implement a timeout to change display from image to video on mouse hover
   useEffect(() => {
     const t = setTimeout(() => {
+       // Display video only if mouse is hovering and screen width is greater than 1000px
       if (mouseEffect && window.innerWidth>1000) {
         setShowImg(false);
       }
@@ -33,23 +35,27 @@ const Card = ({ imgsrc, videosrc }) => {
   const [animationParent] = useAutoAnimate()
   return (
     <div ref={animationParent}
-      onMouseLeave={() => {
-        triggerMouseEffect(false);
-        setShowImg(true);
-        
-      }}
+    onMouseLeave={() => {
+      // Set mouse effect and image display back to initial values on mouse leave
+      triggerMouseEffect(false);
+      setShowImg(true);
+      
+    }}
      
     >
       {showImg ? (
+         // Render image if mouse is not hovering or screen width is less than 1000px
         <img className="tile" 
         onMouseEnter={() => {
+             // Set mouse effect to true on mouse enter
           triggerMouseEffect(true);
-      
-       
+          
+          
         }}
-         src={imgsrc} id="t1"></img>
-      ) : (
-        <div id="va">
+        src={imgsrc} id="t1"></img>
+        ) : (
+            // Render video if mouse is hovering and screen width is greater than 1000px
+          <div id="va">
           <video className="t" id="vis" src={videosrc} autoPlay loop muted />
           <div className="vidbtn">
             <div className="ral">
@@ -69,17 +75,28 @@ const Card = ({ imgsrc, videosrc }) => {
     </div>
   );
 };
-
+// Define custom component Pop to render popular movie section
 export const Pop = ({Data,Text="Popular on Netflix",special=false}) => {
+  const [width,setWidth] =useState(window.innerWidth);
+  
+  useEffect(()=>{
+    const t = window.addEventListener('resize',()=>{
+      setWidth(window.innerWidth)
+    });
+    return ()=>{
+      window.removeEventListener('resize',t);
+    }
+  },[])
+   // Conditional Rendering movie cards depending upon whether user is on Mobile or Desktop
   return (
     <> 
+     
     <div className="wrapper">
       <div className="main">
         <div className={`pop ${special?"specialPop":""}`}>{Text}</div>
-
-        {
-          window.innerWidth<1000?(
-        <Swiper pagination={true} modules={[Pagination]} className="mySwiper" >
+        
+        {width<1000?(
+          <Swiper pagination={true} modules={[Pagination]} className="mySwiper" >
           <SwiperSlide>
             <div className="box">
               {Data.slice(0,2).map((d) => {

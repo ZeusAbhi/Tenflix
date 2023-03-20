@@ -1,14 +1,15 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, Fragment } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { About } from "./components/about";
 import { Services } from "./components/services";
 import autoAnimate from "@formkit/auto-animate";
 import { Navbar } from "./components/navbar";
 import { Contact } from "./components/contact";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const RouteComponent = () => {
@@ -16,8 +17,18 @@ const RouteComponent = () => {
   useEffect(() => {
     parent.current && autoAnimate(parent.current)
   }, [parent])
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    document.documentElement.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant", 
+    });
+  }, [pathname]);
+  
   return (
-    <div ref={parent}>
+    <div ref={parent} style={{overflowX: "hidden"}}>
       <Navbar />
       <Routes>
         <Route path="/" element={<App />} />

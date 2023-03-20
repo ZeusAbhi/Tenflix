@@ -1,79 +1,98 @@
-.drop #a{
-    padding:14px;
-    margin-top:2px;
-    font-size: 1rem;
+.drop #a {
+  padding: 14px;
+  margin-top: 2px;
+  font-size: 1rem;
 }
-.drop #li{
-    cursor:pointer;
-    list-style:none;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    text-align:center;
-    background: rgba(0,0,0,70%);
-   
-
-
+.drop #li {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background: rgba(0, 0, 0, 70%);
 }
-nav,.net{
-    z-index: 2;
-    position: relative;
+nav,
+.net {
+  z-index: 2;
+  position: fixed;
 }
-.im{
-    height: 71px;
-
+.navD {
+  width: 100vw;
+  height: max-content;
+}
+.im {
+  height: 71px;
 }
 
-.list{
-    display: flex;
-    list-style: none;
-    position: absolute;
-    top: 0px;
-    justify-content: center;
-    align-items: center;
-}
-@media screen and (max-width: 670px) {
-    .list{
-         display: none;
-    }
-   }
-
-.imd{
-    height: 50px;
-    position: absolute;
-    top: 0;
-   display: none;
- 
+.list {
+  display: flex;
+  list-style: none;
+  /* position: absolute; */
+  top: 0px;
+  /* justify-content: center; */
+  align-items: center;
 }
 @media screen and (max-width: 670px) {
-    .imd{
-         height: 60px;
-         display: flex;
-    }
-   }
-
-.btn{
-    display: flex;
-    position: absolute;
-    top: 0;
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-    
-    left: 30vw;
-    background-color: transparent;
-    outline-style: none;
-    color: white;
-    border: 0px solid transparent;
-    cursor: pointer;
+  .list {
     display: none;
+  }
+}
+
+.imd {
+  height: 50px;
+  position: absolute;
+  top: 0;
+  display: none;
 }
 @media screen and (max-width: 670px) {
-    .btn{
-    
-         display: flex;
-         margin-top: 3vh;
-         
-         
-    }
-   }
+  .imd {
+    height: 60px;
+    display: flex;
+  }
+}
+
+.btn {
+  display: flex;
+  position: absolute;
+  top: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+
+  left: 30vw;
+  background-color: transparent;
+  outline-style: none;
+  color: white;
+  border: 0px solid transparent;
+  cursor: pointer;
+  display: none;
+}
+@media screen and (max-width: 670px) {
+  .btn {
+    display: flex;
+    margin-top: 3vh;
+  }
+}
+@keyframes fadeToTransparent {
+  0% {
+    background: rgba(0, 0, 0, 0.84);
+  }
+  100% {
+    background: transparent;
+  }
+}
+@keyframes fadeToBlack {
+  0% {
+    background: transparent;
+  }
+  100% {
+    background: rgba(0, 0, 0, 0.84);
+  }
+}
+.transparentNav {
+  animation: fadeToTransparent 400ms forwards ease-in-out;
+}
+.blackNav {
+  animation: fadeToBlack 400ms forwards ease-in-out;
+}

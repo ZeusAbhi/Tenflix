@@ -2,6 +2,7 @@ import React from 'react'
 import './services.css'
 
 export const Services = () => {
+   // Fairly easy to understand code 😊
   return (
     <>  
       <div className="bgcolor">
