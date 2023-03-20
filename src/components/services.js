@@ -18,7 +18,7 @@ export const Services = () => {
         <img className='servicesimage' src="./tv.png" alt="" srcset=""/>
         </div>
         <div>
-            <video className="tvvid" src="./cobrakai.mp4" autoPlay loop muted/>
+            <video className="tvvid" src="./cobrakai.mp4" autoPlay loop muted playsInline/>
         </div>
         </div>
     </div>
@@ -60,7 +60,7 @@ export const Services = () => {
           <div className="image2">
         <img className='genos'  src="./tv2.png" alt="" srcset=""/>
         <div>
-            <video className="tvvid2" src="./genos.mp4" autoPlay loop muted/>
+            <video className="tvvid2" src="./genos.mp4" autoPlay loop muted playsInline/>
         </div>
         </div>
         </div>
